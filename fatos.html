@@ -7,18 +7,86 @@
     <link rel="stylesheet" href="/css/style.css">
     <style>
     body {
-        margin: 0;
-        font-family: 'Courier New', Courier, monospace;
-        color:rgb(0, 0, 0);
-        background:brown;
-        
-    }
+            margin: 0;
+            padding: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00ff41; /* Verde estilo monitor de câmera antigo */
+            background-color: #080808; /* Preto escuro da pizzaria */
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ff0000; /* Vermelho sangue/alerta */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px #550000;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #aaaaaa;
+            font-style: italic;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: #ffff00; /* Amarelo de aviso */
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #ffff00;
+            background-color: #111111;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff0000;
+            color: #ffffff;
+            border-color: #ff0000;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #111111;
+            padding: 25px;
+            border: 1px solid #333333;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #ffffff;
+            border-left: 4px solid #ff0000;
+            padding-left: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #dddddd;
+        }
+
+        strong {
+            color: #ff0000;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Five Nights at Freddy's</h1>
-     <p>Fan-Site for all.</p>
+        <img src="./Five_Nights_at_Freddy's.svg" alt="FNAF logo" width="25%">
+     <p>Fatos curiosos.</p>
     <header>
     
     <nav>
@@ -29,16 +97,21 @@
 
     <main>
         <h2>Bem-vindo à Pizzaria mais famosa dos games!</h2>
+        <p>Apesar da serie ser famosa, há vários fatos desconhecidos pelo público! Venha ver!
         <li>
         <p>Há diversos fatos sobre a franquia de jogos famosa! Como por exemplo: </p>
         </li>
-        <br>
         <li>
         <p> Você sabia? Bonnie o Coelho deu pesadelos ao criador da franquia!</p>
         </li>
-        <br>
         <li>
         <p> Você sabia? Freddy Fazbear era para, originalmente, ser um castor!</p>
+        </li>
+        <li>
+        <p> Você sabia? Foxy o Pirata era para ser um lobo!</p>
+        </li>
+        <li>
+        <p> Você sabia? Há um jogo da franquia que foi tirado da Steam, conhecido como "FNAF World"! Um jogo mais fofo e sem o medo original da franquia, no qual foi recebida de um jeito ruim pelos fans.</p>
         </li>
     </main>
 </body>
