@@ -73,6 +73,43 @@ body {
         strong {
             color: #ff0000;
         }
+        .site-logo {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            background-image: url('TYIMAGE1.webp');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center left;
+        }
+        .logo-wrapper {
+        position: relative;
+        display: inline-block; 
+        overflow: hidden;    
+        border-radius: 8px;   
+        }
+
+        .logo-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(8px) brightness(0.6);
+        transform: scale(1.1);             
+        z-index: 1;
+        }
+        .logo-fg {
+        position: relative;
+        z-index: 2;
+        width: 50%; 
+        height: auto;
+        display: block;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        }
 * {
     box-sizing: border-box;
     margin: 0;
@@ -184,40 +221,3 @@ main h2 {
 main p {
     margin-bottom: 15px;
 }
-        .site-logo {
-            display: inline-block;
-            width: 150px;
-            height: 50px;
-            background-image: url('TYIMAGE1.webp');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center left;
-        }
-        .logo-wrapper {
-        position: relative;
-        display: inline-block; 
-        overflow: hidden;    
-        border-radius: 8px;   
-        }
-
-        .logo-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: blur(8px) brightness(0.6);
-        transform: scale(1.1);             
-        z-index: 1;
-        }
-        .logo-fg {
-        position: relative;
-        z-index: 2;
-        width: 50%; 
-        height: auto;
-        display: block;
-        padding: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        }
