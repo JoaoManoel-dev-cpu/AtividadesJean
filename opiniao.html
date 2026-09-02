@@ -3,44 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Five Nights at Freddy's - Fan Site</title>
-    <link rel="stylesheet" href="css\style.css">
-    <style>
-    </style>
+    <title>Five Nights at Freddy's - Sua Opinião</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-        <!-- Painel expansível no canto superior direito -->
-        <div class="feedback-widget">
-            <input type="checkbox" id="toggle-feedback" class="feedback-toggle">
-            <label for="toggle-feedback" class="feedback-btn">Opinião / Feedback</label>
-            
-            <div class="feedback-panel">
-                <h4>Deixe seu Feedback</h4>
-                <form action="#" method="POST">
-                    <label for="user-email">Seu e-mail:</label>
-                    <input type="email" id="user-email" name="email" placeholder="guarda@pizzaria.com" required>
 
-                    <label for="user-opinion">Sua opinião:</label>
-                    <textarea id="user-opinion" name="opiniao" placeholder="O que achou do site?" required></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="logo-wrapper">
-            <img src="TYIMAGE1.webp" alt="Background" class="logo-bg">
-            <img src="./Five_Nights_at_Freddy's.svg" alt="FNAF logo" class="logo-fg" width="50%">
-        </div>
+    <header>
+        <img src="./Five_Nights_at_Freddy's.svg" alt="FNAF logo" width="50%">
         <p>Fan-Site</p>
     </header>
     
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="jogos.html">Jogos</a>
-        <a href="fatos.html">Fatos Curiosos</a>
-        <a href="opiniao.html">Sua Opinião</a>
+    <nav class="nav-opiniao">
+        <h2>Deixe sua Opinião</h2>
+        <form action="#" method="POST" class="form-feedback">
+            <div class="campo-grupo">
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="guarda@pizzaria.com" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="opiniao">Sua Opinião:</label>
+                <textarea id="opiniao" name="opiniao" rows="4" placeholder="Escreva o que achou da experiência na pizzaria..." required></textarea>
+            </div>
+
+            <button type="submit">Enviar Feedbacks</button>
+        </form>
     </nav>
 
     <main>
