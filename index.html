@@ -4,37 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Five Nights at Freddy's - Fan Site</title>
+    
+    <!-- CDN do Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Seu arquivo CSS externo com os estilos personalizados -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="fnaf_1_icon_recreation_by_zerodigitalartsymore_de31r8t-pre.jpg" href="fnaf_1_icon_recreation_by_zerodigitalartsymore_de31r8t-pre.jpg">
+    
+    <link rel="icon" type="image/jpeg" href="fnaf_1_icon_recreation_by_zerodigitalartsymore_de31r8t-pre.jpg">
+
     <style>
+        body {
+            background-color: #080808;
+            color: #00ff41;
+        }
+
+        .custom-navbar {
+            background-color: #111111 !important;
+            border-bottom: 2px solid #ff0000;
+        }
+
+        .custom-navbar .navbar-brand {
+            color: #ff0000 !important;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .custom-navbar .nav-link {
+            color: #ffff00 !important;
+            border: 1px solid #ffff00;
+            background-color: #111111;
+            font-weight: bold;
+            padding: 8px 16px !important;
+            margin: 2px 5px;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .custom-navbar .nav-link:hover {
+            background-color: #ff0000 !important;
+            color: #ffffff !important;
+            border-color: #ff0000;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        .custom-card {
+            background-color: #111111;
+            border: 1px solid #ff0000;
+            color: #dddddd;
+        }
+
+        .modal-content {
+            background-color: #111111;
+            border: 2px solid #ff0000;
+            color: #00ff41;
+        }
+
+        .modal-header, .modal-footer {
+            border-color: #ff0000;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-wrapper">
-    # Imagem atrás da logo.
-    <img src="TYIMAGE1.webp" alt="Background" class="logo-bg">
-    
-    # Imagem acima da imagem de fundo... Meio complicado.
-    <img src="./Five_Nights_at_Freddy's.svg" alt="FNAF logo" class="logo-fg" width="50%">
-  </div>
-        <p>Fan-Site</p>
-    </header>
-    
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="jogos.html">Jogos</a>
-        <a href="fatos.html">Fatos Curiosos</a>
-        <a href="opiniao.html">Sua Opinião</a>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar rounded mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <span class="badge bg-danger me-2">LIVE</span> FAZBEAR MONITOR
+            </a>
+            <button class="navbar-toggler border-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavNav" aria-controls="navbarNavNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavNav">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Início</a>
+                    <a class="nav-link" href="jogos.html">Jogos</a>
+                    <a class="nav-link" href="fatos.html">Fatos Curiosos</a>
+                    <a class="nav-link" href="opiniao.html">Sua Opinião</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <h2>Bem-vindo à Pizzaria mais famosa dos games!</h2>
-        <p><strong>Five Nights at Freddy's (FNAF)</strong> é uma franquia de jogos de terror criada em 2014 por Scott Cawthon. O projeto começou como um último recurso financeiro e acabou se tornando uma das maiores febres globais da cultura pop.</p>
+    <div class="container main-container p-4 rounded">
 
-        <p>A premissa coloca você na pele do guarda noturno de uma pizzaria infantil dos anos 80. À medida que as horas passam, você descobre que os robôs animatrônicos ganham vida à noite, transformando a atmosfera divertida em um verdadeiro <strong>pesadelo de sobrevivência</strong>.</p>
-    </main>
-    </body>
+        <header class="text-center mb-4">
+            <div class="logo-wrapper">
+                <img src="TYIMAGE1.webp" alt="Background" class="logo-bg">
+                <img src="./Five_Nights_at_Freddy's.svg" alt="FNAF logo" class="logo-fg">
+            </div>
+            <p class="mt-2">Fan-Site</p>
+        </header>
 
+        <div class="alert alert-danger d-flex align-items-center justify-content-between" role="alert">
+            <div>
+                <strong>AVISO DE SEGURANÇA:</strong> Animatrônicos em movimentação após a meia-noite.
+            </div>
+            <span class="badge bg-dark text-danger border border-danger">SISTEMA ATIVO</span>
+        </div>
+
+        <main class="my-4">
+            <h2>Bem-vindo à Pizzaria mais famosa dos games!</h2>
+            <p><strong>Five Nights at Freddy's (FNAF)</strong> é uma franquia de jogos de terror criada em 2014 por Scott Cawthon. O projeto começou como um último recurso financeiro e acabou se tornando uma das maiores febres globais da cultura pop.</p>
+
+            <p>A premissa coloca você na pele do guarda noturno de uma pizzaria infantil dos anos 80. À medida que as horas passam, você descobre que os robôs animatrônicos ganham vida à noite, transformando a atmosfera divertida em um verdadeiro <strong>pesadelo de sobrevivência</strong>.</p>
+        </main>
+
+        <section class="my-5">
+            <h3 class="text-danger mb-3">Câmeras de Segurança</h3>
+            <div id="fnafCarousel" class="carousel slide border border-danger rounded" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active p-4 text-center bg-dark">
+                        <h4 class="text-warning">CAM 1A - Palco Principal</h4>
+                        <p class="text-muted">Freddy, Bonnie e Chica estão posicionados.</p>
+                    </div>
+                    <div class="carousel-item p-4 text-center bg-dark">
+                        <h4 class="text-danger">CAM 1C - Pirate Cove</h4>
+                        <p class="text-muted">Cortinas fechadas. Mantenha os olhos em Foxy!</p>
+                    </div>
+                    <div class="carousel-item p-4 text-center bg-dark">
+                        <h4 class="text-warning">CAM 2B - Corredor Esquerdo</h4>
+                        <p class="text-muted">Luz do corredor operacional.</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#fnafCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#fnafCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <section class="my-5">
+            <h3 class="text-danger mb-3">Status dos Animatrônicos</h3>
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <div class="card custom-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Freddy Fazbear</h5>
+                            <p class="card-text">Líder do grupo. Torna-se extremamente ativo nas noites finais ou quando a energia acaba.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card custom-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Bonnie & Chica</h5>
+                            <p class="card-text">Aacam pelas portas laterais (esquerda e direita). Fique atento aos sons de respiração!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center my-4">
+            <button type="button" class="btn btn-outline-danger btn-lg w-100" data-bs-toggle="modal" data-bs-target="#modalSeguranca">
+                ⚠️ CONSULTAR REGULAMENTO DO GUARDA
+            </button>
+        </div>
+
+        <div class="modal fade" id="modalSeguranca" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger">REGULAMENTO FAZBEAR ENTERTAINMENT</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        1. Economize a bateria das portas e luzes.<br>
+                        2. Verifique a Pirate Cove constantemente.<br>
+                        3. A Fazbear Entertainment não se responsabiliza por danos à integridade física.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
